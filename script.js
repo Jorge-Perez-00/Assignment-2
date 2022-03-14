@@ -71,8 +71,18 @@ function addC() {
 
 //Removes a row
 function removeR() {
-    alert("Clicked Remove Row")
+    //alert("Clicked Remove Row")
+    let grid = document.getElementById("grid");
+    let rows = document.getElementsByTagName("tr");
+
+    if(rows.length === 0) {
+        alert("There are no rows to delete")
+    }
+    else{
+        grid.removeChild(grid.lastElementChild)
+    }
 }
+
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
