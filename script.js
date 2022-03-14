@@ -42,7 +42,7 @@ function addC() {
     //alert("Clicked Add Col")
     let grid = document.getElementById("grid")
     let cols = document.getElementsByTagName("td");
-    //console.log(cols.length);
+    console.log(cols.length);
 
     if(cols.length === 0) {
         let row = document.createElement("tr");
@@ -85,8 +85,28 @@ function removeR() {
 
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+    let grid = document.getElementById("grid");
+    let rows = document.getElementsByTagName("tr");
+
+    if(rows.length === 0){
+        alert("There are no columns to delete");
+    }
+    else{
+        let columns = rows[0].childElementCount
+        if(columns === 1) {
+            while(rows.length > 0) {
+                grid.removeChild(grid.lastElementChild);
+            }
+        }
+        else{
+            for(let row of rows) {
+                row.removeChild(row.lastElementChild);
+            }
+        }
+    }
+    //alert("Clicked Remove Col")
 }
+
 //sets global var for selected color
 function selected() {
     colorSelected = document.getElementById("selectedID").value;
