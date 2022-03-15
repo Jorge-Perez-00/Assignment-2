@@ -133,5 +133,12 @@ function clearAll() {
 }
 
 function fillU() {
-    alert("Clicked Fill All Uncolored")
+    //alert("Clicked Fill All Uncolored")
+    let cells = document.querySelectorAll("td")
+    
+    for(let cell of cells) {
+        if(cell.style.backgroundColor == ""){
+            cell.style.backgroundColor = colorSelected;
+        }
+    }
 }
