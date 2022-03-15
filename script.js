@@ -114,7 +114,12 @@ function selected() {
 }
 
 function fill() {
-    alert("Clicked Fill All")
+    //alert("Clicked Fill All")
+    let cells = document.querySelectorAll("td")
+
+    for(let cell of cells){
+        cell.style.background = colorSelected;
+    }
 }
 
 function clearAll() {
