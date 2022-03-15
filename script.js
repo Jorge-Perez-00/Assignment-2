@@ -2,10 +2,8 @@ let colorSelected;
 
 //Adds a row
 function addR() {
-    //alert("Clicked Add Row")
     let grid = document.getElementById("grid");
     let rows = document.getElementsByTagName("tr");
-    //console.log(rows.length);
 
 
     if (rows.length === 0) {
@@ -17,8 +15,6 @@ function addR() {
         };
         
         grid.appendChild(row);
-
-
     }
     else {
         let NumberOfColumns = rows[0].childElementCount
@@ -39,7 +35,6 @@ function addR() {
 
 //Adds a column
 function addC() {
-    //alert("Clicked Add Col")
     let grid = document.getElementById("grid")
     let cols = document.getElementsByTagName("td");
     console.log(cols.length);
@@ -71,7 +66,6 @@ function addC() {
 
 //Removes a row
 function removeR() {
-    //alert("Clicked Remove Row")
     let grid = document.getElementById("grid");
     let rows = document.getElementsByTagName("tr");
 
@@ -83,7 +77,7 @@ function removeR() {
     }
 }
 
-//Remove a column
+//Removes a column
 function removeC() {
     let grid = document.getElementById("grid");
     let rows = document.getElementsByTagName("tr");
@@ -104,7 +98,6 @@ function removeC() {
             }
         }
     }
-    //alert("Clicked Remove Col")
 }
 
 //sets global var for selected color
@@ -113,27 +106,27 @@ function selected() {
     console.log(colorSelected);
 }
 
+//Fills all the cells to the current selected color
 function fill() {
-    //alert("Clicked Fill All")
     let cells = document.querySelectorAll("td")
 
     for(let cell of cells){
-        cell.style.background = colorSelected;
+        cell.style.backgroundColor = colorSelected;
     }
 }
 
+//Clears all cells to its default color
 function clearAll() {
-    //alert("Clicked Clear All")
     let cells = document.querySelectorAll("td")
 
     for(let cell of cells){
-        cell.style.background = ""
+        cell.style.backgroundColor = ""
     }
 
 }
 
+//Fills all uncolored cells with the currently selected color
 function fillU() {
-    //alert("Clicked Fill All Uncolored")
     let cells = document.querySelectorAll("td")
     
     for(let cell of cells) {
