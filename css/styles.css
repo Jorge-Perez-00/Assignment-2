@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 tr,
 td {
   border: 1px;
@@ -7,4 +11,21 @@ td {
   height: 50px;
   width: 50px;
   background-color: white;
+}
+
+button {
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #373da1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  color: aqua;
+}
+
+select {
+  font-size: 16px;
+  border: none;
 }
