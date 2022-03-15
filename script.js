@@ -123,7 +123,13 @@ function fill() {
 }
 
 function clearAll() {
-    alert("Clicked Clear All")
+    //alert("Clicked Clear All")
+    let cells = document.querySelectorAll("td")
+
+    for(let cell of cells){
+        cell.style.background = ""
+    }
+
 }
 
 function fillU() {
